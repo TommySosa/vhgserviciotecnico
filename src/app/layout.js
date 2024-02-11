@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'VHG Servicio Técnico',
-  description: 'Servicio técnico en Yerba Buena, Tucumán. Especializado en reparación, limpieza, cambio de pasta térmica, reparación de módulos, cambio de botones y sistemas operativos para computadoras, celulares y consolas.',
+  description: '¿Buscas un servicio técnico confiable en Yerba Buena, para reparar tus dispositivos electrónicos? En V.H.G, ofrecemos soluciones para la reparación, limpieza, cambio de pasta térmica, cambio de módulo, cambio de botones, cambio de pin de carga, cambio de sistemas operativos, y más! ',
 }
 
 export default function RootLayout({ children }) {
