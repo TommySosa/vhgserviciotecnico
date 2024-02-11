@@ -1,9 +1,19 @@
-import React from 'react'
-import Whatsapp from '../icons/whatsapp'
+import Image from "next/image";
+import headerImage from "../../../public/header3.jpg";
+import Whatsapp from "../icons/whatsapp";
 
 export default function Header() {
     return (
-        <header className="relative bg-cover bg-center h-screen" style={{ backgroundImage: "url(header3.jpg)" }}>
+        <header className="relative bg-cover bg-center h-screen">
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src={headerImage}
+                    alt="Header Image"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    quality={100}
+                />
+            </div>
             <nav className="fixed z-50 top-0 left-0 right-0 bg-transparent p-4">
                 <div className="flex justify-center flex-wrap">
                     <a className="text-white text-lg mx-4 my-2 hover:underline" href="#servicios">Servicios</a>
@@ -12,7 +22,7 @@ export default function Header() {
                     <a className="text-white text-lg mx-4 my-2 hover:underline" href="#contacto">Contacto</a>
                 </div>
             </nav>
-            <div className="flex h-full flex-col justify-center items-center text-center p-4">
+            <div className="flex h-full flex-col justify-center items-center text-center p-4 relative z-10">
                 <h1 className="text-5xl font-bold text-white">V.H.G Servicio Técnico</h1>
                 <p className="text-2xl text-white mt-4">Rápido, confiable y accesible</p>
                 <div className="flex flex-col md:flex-row items-center">
@@ -27,5 +37,5 @@ export default function Header() {
                 </div>
             </div>
         </header>
-    )
+    );
 }

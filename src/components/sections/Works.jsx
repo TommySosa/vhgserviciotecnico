@@ -57,18 +57,18 @@ const Carousel = () => {
         <div className="bg-gradient-to-r from-[#3f5efb] to-[#46fcb1] ">
           <h2 className="text-3xl font-bold text-center text-white mb-6" id="trabajos">Trabajos realizados</h2>
         </div>
+
         <div className="w-full mx-auto mt-8 relative overflow-hidden">
-          <div className="flex transition-transform ease-in-out duration-300 transform">
+          <div className="flex">
             {works.map((work, index) => (
               <div
                 key={index}
-                className={`w-full ${index === currentIndex ? '' : 'hidden'}`}
-                style={{ height: '600px' }}
+                className={`w-full ${index === currentIndex ? '' : 'hidden'} h-[450px] md:h-[700px]`}
               >
                 {index === currentIndex && (
                   <>
-                    <img src={work.url_image} alt={`Slide ${index + 1}`} className="w-full h-full object-fill" />
-                    <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
+                    <img src={work.url_image} alt={`Slide ${index + 1}`} className="w-full h-full md:object-cover object-contain" />
+                    <div className="absolute md:bottom-0 bottom-20 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
                       {work.description}
                     </div>
                   </>
@@ -85,6 +85,7 @@ const Carousel = () => {
             </button>
           </div>
         </div>
+
       </section >
     </>
   );
